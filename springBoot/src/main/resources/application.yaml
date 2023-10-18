@@ -1,0 +1,35 @@
+# server??
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+# ?????
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql:///sm_db
+      username: root
+      password: 2015
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+
+
+# mybatis-plus???
+mybatis-plus:
+  type-aliases-package: com.ph.pojo
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted  #??????
+      id-type: auto #???????
+      table-prefix: news_ # ??????
+
+#jwt??
+jwt:
+  token:
+    tokenExpiration: 120 #????,????
+    tokenSignKey: headline123456  #???????? ???
+
+
